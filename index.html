@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TooPlan - Planes personalizados en segundos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-noise"></div>
+  <header id="header-container">
+    <div id="nav-bar">
+      <a href="#home" class="logo" aria-label="TooPlan">
+        <span class="logo-mark">TP</span>
+        <span class="logo-text">TooPlan</span>
+      </a>
+      <nav class="nav-menu" aria-label="Principal">
+        <a href="#home" class="nav-link">Inicio</a>
+        <a href="#about" class="nav-link">TooPlan</a>
+        <a href="#functionality" class="nav-link">¿Cómo usarlo?</a>
+        <a href="#profits" class="nav-link">Beneficios</a>
+        <a href="#download" class="nav-link">Descargar</a>
+      </nav>
+      <a class="btn ghost" href="#download">Probar gratis</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="orb orb-left"></div>
+      <div class="orb orb-right"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Planes personalizados en segundos</p>
+          <h1>Vive la vida sin excusas, con planes únicos cada día.</h1>
+          <p class="lede">TooPlan te sugiere qué hacer según tus gustos, tu energía y tu presupuesto. Sin buscar, sin decidir, solo disfrutar.</p>
+          <div class="rotator" aria-live="polite">
+            <span class="subtitle">Planes creados para</span>
+            <span class="rotating-word" id="rotating-word">tus gustos</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn primary" href="#download">Descargar</a>
+            <a class="btn outline" href="#functionality">Ver cómo funciona</a>
+          </div>
+          <div class="hero-tags">
+            <span>Se adapta a tu presupuesto</span>
+            <span>Recomendaciones en tu ciudad</span>
+            <span>Todo en segundos</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="device-shell">
+            <div class="device-top">
+              <span class="signal"></span>
+              <span class="camera"></span>
+            </div>
+            <div class="device-screen">
+              <div class="screen-card active">
+                <p class="pill pill-primary">Estado de ánimo</p>
+                <h3>Una salida relajada</h3>
+                <p class="muted">Jazz bar, café de especialidad y paseo al atardecer.</p>
+              </div>
+              <div class="screen-card">
+                <p class="pill">Presupuesto</p>
+                <h3>Plan económico</h3>
+                <p class="muted">Rutas gratis, spots secretos y descuentos cercanos.</p>
+              </div>
+              <div class="screen-card">
+                <p class="pill">Gustos</p>
+                <h3>Experiencia foodie</h3>
+                <p class="muted">Tapas creativas, cata rápida y mesa compartida.</p>
+              </div>
+            </div>
+          </div>
+          <div class="floating-chip">
+            <span class="dot"></span>
+            <div>
+              <p class="chip-title">TooPlan aprende de ti</p>
+              <p class="chip-sub">Cuanto más lo usas, más te sorprende.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-header">
+        <p class="eyebrow">TooPlan en acción</p>
+        <h2>Tu plan perfecto en segundos</h2>
+        <p class="lede">Cada momento libre es una oportunidad para descubrir algo nuevo. TooPlan lo prepara por ti.</p>
+      </div>
+      <div class="about-grid">
+        <article class="about-card">
+          <div class="icon-circle">✔</div>
+          <h3>Vivir sin excusas</h3>
+          <p>Los mejores recuerdos no se planifican con meses de antelación: se viven hoy.</p>
+          <ul>
+            <li>Ideas listas en pocos taps.</li>
+            <li>Recorridos y experiencias únicas.</li>
+          </ul>
+        </article>
+        <article class="about-card">
+          <div class="icon-circle">★</div>
+          <h3>Personalización real</h3>
+          <p>No todos disfrutan lo mismo. TooPlan adapta cada plan a tu energía, intereses y presupuesto.</p>
+          <ul>
+            <li>Aprende de cada elección.</li>
+            <li>Sorprende con propuestas nuevas.</li>
+          </ul>
+        </article>
+        <article class="about-card">
+          <div class="icon-circle">∞</div>
+          <h3>Rompe tu mapa mental</h3>
+          <p>Desbloquea lugares, personas y sensaciones que no sabías que estaban ahí.</p>
+          <ul>
+            <li>Explora tu ciudad como misión.</li>
+            <li>Cada día, una historia distinta.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="functionality" class="section dual">
+      <div class="section-header">
+        <p class="eyebrow">¿Cómo se utiliza?</p>
+        <h2>No pierdas tiempo planeando. Empieza a vivir.</h2>
+        <p class="lede">Sigue tres pasos sencillos y deja que TooPlan haga el resto.</p>
+      </div>
+      <div class="functionality-grid">
+        <div class="mockup" id="mockup">
+          <div class="mockup-top">
+            <span class="signal"></span>
+            <span class="camera"></span>
+          </div>
+          <div class="mockup-screen" id="displayed-image">
+            <p class="pill pill-primary" id="step-label">Paso 1</p>
+            <h3 id="step-title">Crea tu cuenta o accede como invitado</h3>
+            <p class="muted" id="step-text">Elige tus gustos y tu estado de ánimo. TooPlan te acompaña sin importar el día.</p>
+          </div>
+        </div>
+        <div id="cards-container" class="steps">
+          <button class="step-card active" data-step="1">
+            <div class="step-icon">1</div>
+            <div>
+              <h3>Crea tu cuenta o accede como invitado</h3>
+              <p>Elige tus gustos y estados de ánimo.</p>
+            </div>
+          </button>
+          <button class="step-card" data-step="2">
+            <div class="step-icon">2</div>
+            <div>
+              <h3>Crea el plan como lo deseas</h3>
+              <p>Ajusta duración, presupuesto y compañía.</p>
+            </div>
+          </button>
+          <button class="step-card" data-step="3">
+            <div class="step-icon">3</div>
+            <div>
+              <h3>Selecciona, guarda o sigue explorando</h3>
+              <p>Todo se adapta a ti en tiempo real.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="profits" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Beneficios</p>
+        <h2>Un día cualquiera o un día único. Tú eliges.</h2>
+      </div>
+      <div class="profit-grid">
+        <div class="profit-card highlight">
+          <p class="pill pill-primary">Express</p>
+          <h3>Planes listos en segundos</h3>
+          <p>Sin perder tiempo comparando. TooPlan recomienda y tú decides.</p>
+        </div>
+        <div class="profit-card">Actividades únicas pensadas solo para ti.</div>
+        <div class="profit-card">Todo se adapta a presupuesto, tiempo y ubicación.</div>
+        <div class="profit-card glass">¡Y lo mejor... totalmente GRATIS!</div>
+        <div class="profit-card">Acceso exclusivo a propuestas antes que nadie.</div>
+        <div class="profit-card image-card">
+          <div class="dots"></div>
+          <div class="line"></div>
+          <p>Explora tu ciudad como si fuera nueva.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="cta">
+      <div class="cta-content">
+        <p class="eyebrow">Listo para descargar</p>
+        <h2>TooPlan reacciona a ti, no al revés.</h2>
+        <p class="lede">Disponible en todas las plataformas. Activa notificaciones para recibir nuevas rutas antes que nadie.</p>
+        <div class="cta-actions">
+          <a class="btn primary" href="#">App Store</a>
+          <a class="btn outline" href="#">Google Play</a>
+        </div>
+      </div>
+      <div class="cta-badge">
+        <p class="pill pill-primary">Próximamente</p>
+        <h3>Cuenta regresiva</h3>
+        <p class="muted">Lanzamiento global en 2025</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="logo"><span class="logo-mark">TP</span> TooPlan</p>
+      <p>La app que convierte cualquier día en una historia.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Inicio</a>
+      <a href="#about">TooPlan</a>
+      <a href="#download">Descargar</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
