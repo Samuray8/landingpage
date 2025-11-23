@@ -16,37 +16,38 @@
                     <span class="logo-name">TooPlan</span>
                 </a>
                 <nav class="nav-menu">
-                    <a href="#about" class="nav-link">Por qué TooPlan</a>
-                    <a href="#functionality" class="nav-link">Cómo funciona</a>
-                    <a href="#profits" class="nav-link">Beneficios</a>
+                    <a href="#about" class="nav-link">¿Qué es?</a>
+                    <a href="#demo" class="nav-link">Cómo funciona</a>
+                    <a href="#need" class="nav-link">Por qué lo necesitas</a>
+                    <a href="#tech" class="nav-link">Tecnología</a>
                     <a href="#download" class="nav-link cta-nav">Descargar</a>
                 </nav>
             </div>
         </header>
 
         <main>
-            <section id="hero" class="section-padding">
+            <section id="hero" class="section-padding full-height">
+                <div class="hero-bg" aria-hidden="true"></div>
                 <div class="hero-grid container">
                     <div class="hero-text">
                         <p class="pill">App de ocio inteligente</p>
-                        <h1>Agenda <span class="gradient-text">planes irrepetibles</span> con IA que entiende tu mood.</h1>
-                        <p class="lead">TooPlan combina gustos, energía y presupuesto para crear itinerarios que se sienten hechos a mano. Tu tiempo libre, optimizado y sin discusiones.</p>
-                        <div class="word-rotator" aria-live="polite">
-                            <span class="label">Diseñado para</span>
-                            <span id="dynamic-word" class="fade">tus gustos</span>
+                        <h1>El plan perfecto para ti. <span class="gradient-text">Sin buscar.</span></h1>
+                        <p class="lead">TooPlan crea planes de ocio ultra-personalizados según tu mood, intereses, ubicación y presupuesto. Tu tiempo libre se vuelve automático.</p>
+                        <div class="hero-badges">
+                            <span class="badge">100% gratis – siempre tendrás un plan perfecto</span>
+                            <div class="word-rotator" aria-live="polite">
+                                <span class="label">Diseñado para</span>
+                                <span id="dynamic-word" class="fade">tu vibe</span>
+                            </div>
                         </div>
                         <div class="hero-actions">
-                            <a class="btn primary" href="#functionality">Ver cómo funciona</a>
-                            <a class="btn ghost" href="#download">Recibir lanzamiento</a>
+                            <a class="btn primary" href="#download">Descargar TooPlan</a>
+                            <a class="btn ghost" href="#demo">Ver cómo funciona</a>
                         </div>
                         <div class="hero-points">
-                            <span class="chip">Sin búsqueda infinita</span>
-                            <span class="chip">Ajustado a tu presupuesto</span>
+                            <span class="chip">Cero búsqueda</span>
+                            <span class="chip">Ajustado a tu bolsillo</span>
                             <span class="chip">Listo en 30 segundos</span>
-                        </div>
-                        <div class="badges">
-                            <a href="#download"><img src="img/badge-googleplay-es.png" alt="Disponible en Google Play"></a>
-                            <a href="#download"><img src="img/badge-appstore-es.png" alt="Disponible en App Store"></a>
                         </div>
                         <div class="hero-metrics">
                             <div class="metric">
@@ -54,23 +55,24 @@
                                 <p class="metric-label">combinaciones posibles</p>
                             </div>
                             <div class="metric">
-                                <p class="metric-value">30 seg</p>
-                                <p class="metric-label">para crear tu plan</p>
-                            </div>
-                            <div class="metric">
                                 <p class="metric-value">24/7</p>
                                 <p class="metric-label">inspiración continua</p>
                             </div>
+                            <div class="metric">
+                                <p class="metric-value">30 seg</p>
+                                <p class="metric-label">para crear tu plan</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="hero-mockup">
-                        <div class="orb"></div>
-                        <div class="floating-card glass">
-                            <p>“Quedamos en 10 minutos, TooPlan ya tiene todo armado.”</p>
-                            <span>Plan espontáneo · 2 amigos</span>
+                    <div class="hero-visual">
+                        <div class="parallax-layer orb purple"></div>
+                        <div class="parallax-layer orb green"></div>
+                        <div class="parallax-layer blur-light"></div>
+                        <div class="floating-card glass">“TooPlan ya tiene todo armado para esta noche.”</div>
+                        <div class="hero-mockup" data-parallax>
+                            <img src="img/mockup-principal.png" alt="Vista previa de TooPlan" class="mockup shadow" id="mockup-main">
+                            <div class="floating-badge glass">Listo cuando tú quieras</div>
                         </div>
-                        <img src="img/mockup-principal.png" alt="Vista previa de TooPlan" class="mockup" id="mockup-principal">
-                        <div class="floating-badge">Calibrando tu mood...</div>
                     </div>
                 </div>
             </section>
@@ -78,76 +80,77 @@
             <section id="about" class="section-padding">
                 <div class="container">
                     <div class="section-header">
-                        <p class="pill">Experiencias personalizadas</p>
-                        <h2>Tu plan perfecto en segundos</h2>
-                        <p class="section-lead">Inspirado en los mejores launches de apps sociales (Konvo, ClickAndPlan) pero diseñado para sorprenderte cada día.</p>
+                        <p class="pill">Planes hechos para ti</p>
+                        <h2>Planes hechos para ti, en segundos.</h2>
+                        <p class="section-lead">Eliges mood, intereses o presupuesto y TooPlan te entrega un plan único. Sin listas infinitas: una solución perfecta y ajustada a ti.</p>
                     </div>
-                    <div class="highlights-grid">
-                        <article class="highlight-card reveal">
-                            <div class="icon-bubble">⚡️</div>
+                    <div class="pillars-grid">
+                        <article class="pillar-card reveal">
+                            <div class="icon-bubble">💜</div>
                             <div>
-                                <h3>Ultra rápido</h3>
-                                <p>Recomendaciones listas antes de que termines de decidir el outfit. Sin formularios eternos.</p>
+                                <h3>Súper personal</h3>
+                                <p>Basado en tu vibe, energía y contexto. No hay dos planes iguales.</p>
                             </div>
                         </article>
-                        <article class="highlight-card reveal">
-                            <div class="icon-bubble">🎯</div>
+                        <article class="pillar-card reveal">
+                            <div class="icon-bubble">🔍</div>
                             <div>
-                                <h3>Preciso a tu vibe</h3>
-                                <p>Te lee: gustos, energía, clima y presupuesto para entregar planes que te representan.</p>
+                                <h3>Cero búsqueda</h3>
+                                <p>Se acabó perder tiempo filtrando. TooPlan te sirve el plan listo.</p>
                             </div>
                         </article>
-                        <article class="highlight-card reveal">
-                            <div class="icon-bubble">🧭</div>
+                        <article class="pillar-card reveal">
+                            <div class="icon-bubble">♻️</div>
                             <div>
-                                <h3>Explora distinto</h3>
-                                <p>Rompe la rutina con rutas y experiencias que no salen en las guías típicas.</p>
-                            </div>
-                        </article>
-                        <article class="highlight-card reveal">
-                            <div class="icon-bubble">🤝</div>
-                            <div>
-                                <h3>Para ti o en crew</h3>
-                                <p>Organiza solo o en grupo, compartiendo planes ajustados a cada preferencia.</p>
+                                <h3>Siempre hay alternativa</h3>
+                                <p>¿No te convence? Swipe y tienes una nueva propuesta al instante.</p>
                             </div>
                         </article>
                     </div>
                 </div>
             </section>
 
-            <section id="functionality" class="section-padding">
+            <section id="demo" class="section-padding alt">
                 <div class="container">
                     <div class="section-header">
-                        <p class="pill">Cómo funciona</p>
-                        <h2>Genera planes guiado por IA en 3 pasos</h2>
-                        <p class="section-lead">Interactúa con las tarjetas para ver la app en acción.</p>
+                        <p class="pill">Demo</p>
+                        <h2>Entiende cómo funciona en 10 segundos</h2>
+                        <p class="section-lead">Desliza y mira cómo la app crea tu plan ideal mientras flotas entre pantallas.</p>
                     </div>
-                    <div class="steps">
-                        <div class="steps-visual">
-                            <div class="glow"></div>
-                            <img id="displayed-image" src="img/mockup-funtions.png" alt="Flujo TooPlan" class="mockup shadow">
-                            <p class="caption">No pierdas tiempo planeando. Empieza a vivir.</p>
+                    <div class="demo-grid">
+                        <div class="steps-slider" id="steps-slider">
+                            <div class="slides" id="slides">
+                                <div class="slide active" data-step="1">
+                                    <img src="img/mockup-funtions.png" alt="Configura tu mood" class="mockup shadow">
+                                </div>
+                                <div class="slide" data-step="2">
+                                    <img src="img/mockup-principal.png" alt="Algoritmo en acción" class="mockup shadow">
+                                </div>
+                                <div class="slide" data-step="3">
+                                    <img src="img/mockup-crearplan-portrait.png" alt="Recibe tu plan" class="mockup shadow">
+                                </div>
+                            </div>
                         </div>
-                        <div class="steps-cards" id="cards-container">
+                        <div class="steps-list" id="steps-list">
                             <button class="step-card active" data-step="1">
                                 <span class="step-number">01</span>
                                 <div>
-                                    <h3>Configura tu mood</h3>
-                                    <p>Elige energía, presupuesto y tiempo disponible. TooPlan aprende de tus swipes.</p>
+                                    <h3>Cuéntanos tu mood</h3>
+                                    <p>Elige energía, intereses o presupuesto. La app aprende de tus swipes.</p>
                                 </div>
                             </button>
                             <button class="step-card" data-step="2">
                                 <span class="step-number">02</span>
                                 <div>
-                                    <h3>Genera el plan</h3>
-                                    <p>La IA cruza datos y clima para crear experiencias dinámicas y realistas.</p>
+                                    <h3>El algoritmo te lee</h3>
+                                    <p>Cruza clima, contexto y tu vibe para crear rutas realistas.</p>
                                 </div>
                             </button>
                             <button class="step-card" data-step="3">
                                 <span class="step-number">03</span>
                                 <div>
-                                    <h3>Guarda o explora</h3>
-                                    <p>Confirma tu favorito, guarda para después o deja que TooPlan siga proponiendo.</p>
+                                    <h3>Recibes tu plan perfecto</h3>
+                                    <p>Un plan listo para salir. ¿No te gusta? Obtén uno nuevo al instante.</p>
                                 </div>
                             </button>
                         </div>
@@ -155,63 +158,85 @@
                 </div>
             </section>
 
-            <section id="profits" class="section-padding">
+            <section id="need" class="section-padding gradient-overlay">
                 <div class="container">
                     <div class="section-header">
-                        <p class="pill">Beneficios</p>
-                        <h2>Un día cualquiera o un día épico. Tú eliges.</h2>
-                        <p class="section-lead">TooPlan trabaja en segundo plano para darte planes memorables sin esfuerzo.</p>
+                        <p class="pill">Por qué lo necesitas</p>
+                        <h2>Vive tu ciudad sin perder tiempo</h2>
+                        <p class="section-lead">Inspirado en la energía urbana y la velocidad de las apps que amas. TooPlan convierte cada momento libre en una experiencia.</p>
                     </div>
-                    <div class="benefits-grid">
-                        <div class="benefit-card reveal">
-                            <h3>Planes en segundos</h3>
-                            <p>Itinerarios listos para salir, adaptados a tu situación exacta.</p>
+                    <div class="need-grid">
+                        <div class="need-card reveal">
+                            <h3>Nunca más perderás horas buscando qué hacer.</h3>
+                            <p>Solo entras, eliges mood y sales. Sin discusiones interminables.</p>
                         </div>
-                        <div class="benefit-card reveal">
-                            <h3>Experiencias diferentes</h3>
-                            <p>Actividades curadas, pensadas solo para ti y alejadas de lo típico.</p>
+                        <div class="need-card reveal">
+                            <h3>Planes adaptados a tus gustos reales.</h3>
+                            <p>Aprende de tus elecciones y te sorprende con lugares que te representan.</p>
                         </div>
-                        <div class="benefit-card reveal">
-                            <h3>Optimizado a tu bolsillo</h3>
-                            <p>Control total de presupuesto, tiempo y ubicación sin sacrificar diversión.</p>
-                        </div>
-                        <div class="benefit-card reveal">
-                            <h3>Siempre conectado</h3>
-                            <p>Actualizaciones en tiempo real para planes indoor, outdoor o híbridos.</p>
+                        <div class="need-card reveal">
+                            <h3>Vive experiencias que recordarás.</h3>
+                            <p>Desde huecos de 30 minutos hasta noches épicas con tu crew.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section-padding alt" aria-label="Prueba social TooPlan">
-                <div class="container social-proof">
-                    <div>
-                        <p class="pill">Confianza</p>
-                        <h2>La comunidad TooPlan no pierde tiempo</h2>
-                        <p class="section-lead">Usuarios se inspiran, comparten y viven más. Únete y descubre por qué TooPlan supera a las lanzaderas de ocio que ya conoces.</p>
-                        <div class="quotes">
-                            <div class="quote-card glass reveal">
-                                <p>“Dejamos de discutir dónde ir. TooPlan nos manda la ruta y solo salimos.”</p>
-                                <span>Camila · Plan en pareja</span>
+            <section id="tech" class="section-padding">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="pill">Innovación</p>
+                        <h2>La app más inteligente para tu tiempo libre.</h2>
+                        <p class="section-lead">Tecnología que te entiende para que siempre tengas un plan listo, sin esfuerzo.</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-card reveal">
+                            <div class="icon-bubble neon">🧠</div>
+                            <div>
+                                <h3>Algoritmo predictivo</h3>
+                                <p>Anticipa tus ganas y propone el plan que quieres antes de pedirlo.</p>
                             </div>
-                            <div class="quote-card glass reveal">
-                                <p>“Funciona mejor que cualquier recomendador que probé. Sabe cuándo quiero chillear o salir de aventura.”</p>
-                                <span>Marco · Domingo con amigos</span>
+                        </div>
+                        <div class="tech-card reveal">
+                            <div class="icon-bubble neon">📍</div>
+                            <div>
+                                <h3>Geolocalización contextual</h3>
+                                <p>Lee clima, distancia y hora para que todo encaje con tu momento.</p>
+                            </div>
+                        </div>
+                        <div class="tech-card reveal">
+                            <div class="icon-bubble neon">🎛️</div>
+                            <div>
+                                <h3>Mood Analyzer</h3>
+                                <p>Combina tus swipes con señales de energía para acertar siempre.</p>
+                            </div>
+                        </div>
+                        <div class="tech-card reveal">
+                            <div class="icon-bubble neon">🔁</div>
+                            <div>
+                                <h3>Adaptación dinámica</h3>
+                                <p>Actualiza el plan en tiempo real si cambias de idea o surge algo.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="proof-card glass reveal">
-                        <h3>Te acompaña en cualquier mood</h3>
+                </div>
+            </section>
+
+            <section id="brand" class="section-padding alt">
+                <div class="container brand-grid">
+                    <div>
+                        <p class="pill">Conócenos</p>
+                        <h2>Estamos construyendo el futuro de tu ocio.</h2>
+                        <p class="section-lead">TooPlan nace para que nunca más pierdas un segundo decidiendo qué hacer. Personalización, experiencias y comunidad en una app.</p>
+                        <div class="badge-inline">Versión 1.0 – en constante evolución</div>
+                    </div>
+                    <div class="brand-card glass reveal">
+                        <h3>Lo que viene</h3>
                         <ul>
-                            <li>Ideas relámpago para huecos de 30 minutos</li>
-                            <li>Planes extendidos con rutas completas</li>
-                            <li>Reservas sugeridas y lugares escondidos</li>
-                            <li>Recordatorios y seguimiento en vivo</li>
+                            <li>Misiones urbanas para explorar con amigos.</li>
+                            <li>Recompensas por cada plan completado.</li>
+                            <li>Planes colaborativos con tu crew.</li>
                         </ul>
-                        <div class="cta-inline">
-                            <a class="btn primary" href="#download">Quiero TooPlan</a>
-                            <span class="tiny">Gratis mientras lanzamos</span>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -220,12 +245,12 @@
                 <div class="container">
                     <div class="download-card">
                         <div>
-                            <p class="pill">Lanzamiento en camino</p>
-                            <h2>Descarga TooPlan y transforma tu tiempo libre</h2>
-                            <p class="section-lead">Suscríbete para recibir acceso anticipado, recompensas por early adopters y las mejores misiones en tu ciudad.</p>
+                            <p class="pill">CTA final</p>
+                            <h2>Empieza a vivir mejor. Un plan a la vez.</h2>
+                            <p class="section-lead">Descarga TooPlan y recibe acceso a planes que encajan contigo. Tu ocio, automatizado.</p>
                             <div class="hero-actions">
-                                <a class="btn primary" href="#">Notificarme</a>
-                                <a class="btn ghost" href="#hero">Volver arriba</a>
+                                <a class="btn primary" href="#">Descargar TooPlan</a>
+                                <a class="btn ghost" href="#hero">Ver más opciones</a>
                             </div>
                             <div class="badges">
                                 <a href="#"><img src="img/badge-googleplay-es.png" alt="Disponible en Google Play"></a>
@@ -246,7 +271,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="#about">Sobre la app</a>
-                    <a href="#functionality">Cómo funciona</a>
+                    <a href="#demo">Cómo funciona</a>
                     <a href="#download">Descargar</a>
                 </div>
                 <p class="copyright">&copy; 2025 TooPlan. Todos los derechos reservados.</p>
