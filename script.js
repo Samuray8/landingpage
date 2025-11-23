@@ -2,13 +2,10 @@ const navbar = document.getElementById('nav-bar');
 const dynamicWord = document.getElementById('dynamic-word');
 const words = ['tu vibe', 'tu crew', 'tu presupuesto', 'tu energía'];
 let wordIndex = 0;
-let sliderTimer;
-let currentStep = '1';
 
 const slidesContainer = document.getElementById('slides');
 const slides = Array.from(document.querySelectorAll('.slide'));
 const stepCards = Array.from(document.querySelectorAll('.step-card'));
-const progressDots = Array.from(document.querySelectorAll('.progress-dot'));
 const parallaxState = { x: 0, y: 0, scroll: 0 };
 
 function rotateWords() {
@@ -39,27 +36,14 @@ function showStep(step) {
   slidesContainer.style.transform = `translateX(-${index * 100}%)`;
   slides.forEach((slide) => slide.classList.toggle('active', slide.dataset.step === step));
   stepCards.forEach((card) => card.classList.toggle('active', card.dataset.step === step));
-  progressDots.forEach((dot) => dot.classList.toggle('active', dot.dataset.step === step));
-  currentStep = step;
 }
 
 function setupSteps() {
   stepCards.forEach((card) => {
     card.addEventListener('click', () => {
       showStep(card.dataset.step);
-      restartAutoSlide();
     });
   });
-}
-
-function restartAutoSlide() {
-  if (!stepCards.length) return;
-  if (sliderTimer) clearInterval(sliderTimer);
-  sliderTimer = setInterval(() => {
-    const index = stepCards.findIndex((card) => card.dataset.step === currentStep);
-    const next = ((index + 1) % stepCards.length) + 1;
-    showStep(String(next));
-  }, 5200);
 }
 
 function setupReveal() {
@@ -110,5 +94,4 @@ document.addEventListener('DOMContentLoaded', () => {
   setupReveal();
   setupParallax();
   showStep('1');
-  restartAutoSlide();
 });
