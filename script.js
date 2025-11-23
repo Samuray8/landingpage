@@ -1,23 +1,69 @@
-//Navbar cambia de color al hacer scroll
-  const navbar = document.getElementById('nav-bar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+const navbar = document.getElementById('nav-bar');
+const dynamicWord = document.getElementById('dynamic-word');
+const words = ['tus gustos', 'tu energía', 'tu presupuesto', 'tu mood'];
+let wordIndex = 0;
 
+const stepImages = {
+  1: 'img/mockup-funtions.png',
+  2: 'img/mockup-principal.png',
+  3: 'img/mockup-crearplan-portrait.png',
+};
 
-// Función para cambiar la imagen al hacer clic en una card
-  function cambiarImagen(cardId) {
-      const imagen = document.getElementById('displayed-image');
-      // Cambiar la imagen dependiendo de la card seleccionada
-      if (cardId === 1) {
-          imagen.src = 'img/mockup-funtions.png';
-      } else if (cardId === 2) {
-          imagen.src = 'img/mockup-crearplan-portrait.png';
-      } else if (cardId === 3) {
-          imagen.src = 'img/mockup-funtions.png';
-      }
+function rotateWords() {
+  if (!dynamicWord) return;
+  dynamicWord.classList.add('fade');
+  setTimeout(() => {
+    wordIndex = (wordIndex + 1) % words.length;
+    dynamicWord.textContent = words[wordIndex];
+    dynamicWord.classList.remove('fade');
+  }, 240);
+}
+
+function handleScroll() {
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
   }
+}
+
+function setupSteps() {
+  const cards = document.querySelectorAll('.step-card');
+  const image = document.getElementById('displayed-image');
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      cards.forEach((c) => c.classList.remove('active'));
+      card.classList.add('active');
+      const step = card.getAttribute('data-step');
+      image.src = stepImages[step] ?? image.src;
+    });
+  });
+}
+
+function setupReveal() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+}
+
+if (dynamicWord) {
+  setInterval(rotateWords, 2200);
+}
+window.addEventListener('scroll', handleScroll);
+
+document.addEventListener('DOMContentLoaded', () => {
+  handleScroll();
+  setupSteps();
+  setupReveal();
+});

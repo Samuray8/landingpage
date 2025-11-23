@@ -1,167 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TooPlan | Planes de ocio inteligentes</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="header-container">
-        <div id="nav-bar">
-            <a href="#" class="logo">
-             <img src="img/Muestra-TIPO-1-3-1-removebg-preview.png" alt="logo">
-            </a>
-            <nav class="nav-menu">
-                    <a href="#home" class="nav-link">Incio</a>
-                    <a href="#about" class="nav-link">TooPlan</a>
-                    <a href="#functionality" class="nav-link">¿Cómo Usarlo?</a>
+    <div class="page-shell">
+        <header id="header-container">
+            <div id="nav-bar" class="glass">
+                <a href="#hero" class="logo" aria-label="TooPlan">
+                    <img src="img/Muestra-TIPO-1-3-1-removebg-preview.png" alt="Logo TooPlan">
+                    <span class="logo-name">TooPlan</span>
+                </a>
+                <nav class="nav-menu">
+                    <a href="#about" class="nav-link">Por qué TooPlan</a>
+                    <a href="#functionality" class="nav-link">Cómo funciona</a>
                     <a href="#profits" class="nav-link">Beneficios</a>
-                    <a href="#dowland" class="nav-link">Descargar</a>
-            </nav>
-        </div>
-    </header>
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Vive la vida sin excusas, con planes únicos cada día</h1>
-                <p>Planes personalizados según tus gustos, estado de ánimo y presupuesto</p>
-                <div class="subtittle-ruleta">
-                    <h2 class="subtittle-sections">Planes persinalizados según </h2> 
-                    <!-- agregar la ruleta con las palbras: donde cuando y para  -->
-                    <div class="word-container" class="subtittle-sections">
-                        <div class="word">tus gustos</div>
-                        <div class="word">tu estado de ánimo</div>
-                        <div class="word">tu presupuesto</div>
-                    </div>
-                </div>
-                <p>Infinitas posibilidades para disfrutar de la vida</p> 
+                    <a href="#download" class="nav-link cta-nav">Descargar</a>
+                </nav>
             </div>
-            <div class="hero-mockup">
-                <img src="img/mockup-principal.png" alt="mockup-principal"  id="mockup-principal">
-                <div class="download">
-                    <a href="#"> <img src="img/badge-googleplay-es.png" class="btn-download"></a>
-                    <a href="#"> <img src="img/badge-appstore-es.png" class="btn-download"></a>
-                <!-- FALTA CUENTA REGRESIVA DE PUBLICAR LA APP -->
-                </div>
-            </div> 
-        </div>
-    </section>
-    <main>
+        </header>
 
+        <main>
+            <section id="hero" class="section-padding">
+                <div class="hero-grid container">
+                    <div class="hero-text">
+                        <p class="pill">App de ocio inteligente</p>
+                        <h1>Agenda <span class="gradient-text">planes irrepetibles</span> con IA que entiende tu mood.</h1>
+                        <p class="lead">TooPlan combina gustos, energía y presupuesto para crear itinerarios que se sienten hechos a mano. Tu tiempo libre, optimizado y sin discusiones.</p>
+                        <div class="word-rotator" aria-live="polite">
+                            <span class="label">Diseñado para</span>
+                            <span id="dynamic-word" class="fade">tus gustos</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a class="btn primary" href="#functionality">Ver cómo funciona</a>
+                            <a class="btn ghost" href="#download">Recibir lanzamiento</a>
+                        </div>
+                        <div class="hero-points">
+                            <span class="chip">Sin búsqueda infinita</span>
+                            <span class="chip">Ajustado a tu presupuesto</span>
+                            <span class="chip">Listo en 30 segundos</span>
+                        </div>
+                        <div class="badges">
+                            <a href="#download"><img src="img/badge-googleplay-es.png" alt="Disponible en Google Play"></a>
+                            <a href="#download"><img src="img/badge-appstore-es.png" alt="Disponible en App Store"></a>
+                        </div>
+                        <div class="hero-metrics">
+                            <div class="metric">
+                                <p class="metric-value">+1M</p>
+                                <p class="metric-label">combinaciones posibles</p>
+                            </div>
+                            <div class="metric">
+                                <p class="metric-value">30 seg</p>
+                                <p class="metric-label">para crear tu plan</p>
+                            </div>
+                            <div class="metric">
+                                <p class="metric-value">24/7</p>
+                                <p class="metric-label">inspiración continua</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-mockup">
+                        <div class="orb"></div>
+                        <div class="floating-card glass">
+                            <p>“Quedamos en 10 minutos, TooPlan ya tiene todo armado.”</p>
+                            <span>Plan espontáneo · 2 amigos</span>
+                        </div>
+                        <img src="img/mockup-principal.png" alt="Vista previa de TooPlan" class="mockup" id="mockup-principal">
+                        <div class="floating-badge">Calibrando tu mood...</div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><g clip-path="url(#97c8db4366)"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/></g><g clip-path="url(#5b8775e23e)"><g clip-path="url(#6310c86bad)"><g transform="matrix(1, 0, 0, 1, 353, 433)"><g clip-path="url(#2fc627981c)"><g clip-path="url(#3824f5dade)"><g clip-path="url(#385e29732a)"><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></g></g></g></g></g></g></svg>   -->
+            <section id="about" class="section-padding">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="pill">Experiencias personalizadas</p>
+                        <h2>Tu plan perfecto en segundos</h2>
+                        <p class="section-lead">Inspirado en los mejores launches de apps sociales (Konvo, ClickAndPlan) pero diseñado para sorprenderte cada día.</p>
+                    </div>
+                    <div class="highlights-grid">
+                        <article class="highlight-card reveal">
+                            <div class="icon-bubble">⚡️</div>
+                            <div>
+                                <h3>Ultra rápido</h3>
+                                <p>Recomendaciones listas antes de que termines de decidir el outfit. Sin formularios eternos.</p>
+                            </div>
+                        </article>
+                        <article class="highlight-card reveal">
+                            <div class="icon-bubble">🎯</div>
+                            <div>
+                                <h3>Preciso a tu vibe</h3>
+                                <p>Te lee: gustos, energía, clima y presupuesto para entregar planes que te representan.</p>
+                            </div>
+                        </article>
+                        <article class="highlight-card reveal">
+                            <div class="icon-bubble">🧭</div>
+                            <div>
+                                <h3>Explora distinto</h3>
+                                <p>Rompe la rutina con rutas y experiencias que no salen en las guías típicas.</p>
+                            </div>
+                        </article>
+                        <article class="highlight-card reveal">
+                            <div class="icon-bubble">🤝</div>
+                            <div>
+                                <h3>Para ti o en crew</h3>
+                                <p>Organiza solo o en grupo, compartiendo planes ajustados a cada preferencia.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-        <section id="about">
-            <h2 class="tittle-sections">Tu Plan <spa class="purple">perfecto</spa> en segundos</h2>
-            <!-- <p>Sin buscar. Sin decidir. Solo disfrutar.</p> -->    
-            <div id="content-about-box">
-                <div class="content-about">
-                    <img src="img/ejemplo.jpg" alt="mockup-about" class="img-about">
-                    <h3 class="call-about">Vivir sin excusas</h3>
-                            <p class="phrase-about">La vida es demasiado corta para dejar los planes para “algún día”.</p>
-                                <p class="description-about">                        
-                                    <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></svg>  
-                                    Cada momento libre es una oportunidad para descubrir algo nuevo.
-                                </p>
-                        <p class="description-about">
-                            <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></svg>  
-                            Los mejores recuerdos no se planifican con meses de antelación, se viven hoy.
-                        </p>
-                </div>
-                <div class="content-about">
-                    <img src="img/ejemplo.jpg" alt="mockup-about" class="img-about">
-                    <h3 class="call-about">La personalización es la clave</h3>
-                        <p class="phrase-about">No todos disfrutan del mismo plan, y eso es lo que lo hace especial.</p>
-                            <p class="description-about">
-                                <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></svg>  
-                                Creamos experiencias adaptadas a tus intereses, energía y presupuesto.
-                            </p>
-                            <p class="description-about">
-                                <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></svg>  
-                                Cuanto más usas TooPlan, más te entiende… y más te sorprende.
-                            </p>          
-                </div>  
-                <div class="content-about">
-                    <img src="img/ejemplo.jpg" alt="mockup-about" class="img-about">
-                    <h3 class="call-about">Rompe tu mapa mental</h3>
-                        <p class="phrase-about">Tu ciudad no es pequeña, tu perspectiva sí.</p>
-                            <p class="description-about">
-                                <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></svg>  
-                                TooPlan desbloquea lugares, personas y sensaciones que no sabías que estaban ahí.
-                            </p>
-                            <p class="description-about">
-                                <svg class="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 1012.49997"  version="1.0"><path d="M 636.652344 265.230469 C 621.34375 249.917969 596.480469 249.917969 581.167969 265.230469 C 581.167969 265.230469 342.554688 504.011719 301.332031 545.269531 C 299.734375 546.875 297.5625 547.777344 295.300781 547.777344 C 293.039062 547.777344 290.867188 546.875 289.269531 545.269531 C 268.375 524.359375 200.355469 456.300781 200.355469 456.300781 C 185.042969 440.96875 160.179688 440.96875 144.867188 456.300781 C 129.558594 471.609375 129.558594 496.5 144.867188 511.8125 C 144.867188 511.8125 236.847656 603.871094 261.527344 628.554688 C 270.484375 637.519531 282.632812 642.554688 295.300781 642.554688 C 307.96875 642.554688 320.117188 637.519531 329.074219 628.554688 C 372.574219 585.027344 636.652344 320.761719 636.652344 320.761719 C 651.964844 305.429688 651.964844 280.558594 636.652344 265.230469 Z M 636.652344 265.230469 " fill-opacity="1" fill-rule="evenodd"/><rect x="-531.2"  y="-655.749993" fill-opacity="1"/></svg>  
-                                Cada calle puede ser una misión; cada día, una historia nueva.
-                            </p>
-                </div>   
-            </div>
-            <!-- <p>Todo en un solo lugar</p> -->
-        </section>
-        <section id="functionality">
-            <h2 class="tittle-sections">¿Cómo se utiliza?</h2>
-            <div class="content-functionality">
-                <div >
-                    <img id="displayed-image" src="img/mockup-funtions.png" alt="mockup-principal"  class="mockup-functionality">
-                    <p>No pierdas tiempo planeando. Empieza a vivir</p>
-                </div>
-                <div id="cards-container">
-                   <div class="card card1" onclick="cambiarImagen(1)">
-                        <svg class="icon-fuctionality" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" zoomAndPan="magnify" viewBox="0 0 810 1012.49997" height="1350" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="c50521cdeb"><path d="M 81.160156 181.582031 L 730.339844 181.582031 L 730.339844 830.761719 L 81.160156 830.761719 Z M 81.160156 181.582031 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#c50521cdeb)"><path  d="M 405.695312 181.554688 C 226.441406 181.554688 81.132812 326.863281 81.132812 506.117188 C 81.132812 685.371094 226.441406 830.679688 405.695312 830.679688 C 584.949219 830.679688 730.257812 685.371094 730.257812 506.117188 C 730.257812 326.863281 584.949219 181.554688 405.695312 181.554688 Z M 405.695312 272.4375 C 470.234375 272.4375 522.542969 324.742188 522.542969 389.285156 C 522.542969 453.824219 470.234375 506.128906 405.695312 506.128906 C 341.15625 506.128906 288.847656 453.808594 288.847656 389.285156 C 288.847656 324.757812 341.15625 272.4375 405.695312 272.4375 Z M 405.695312 752.800781 C 322.738281 752.800781 249.53125 711.726562 204.8125 648.941406 C 249.53125 586.15625 322.738281 545.085938 405.695312 545.085938 C 488.652344 545.085938 561.859375 586.15625 606.578125 648.941406 C 561.859375 711.726562 488.652344 752.800781 405.695312 752.800781 Z M 405.695312 752.800781 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
-                        <h2>Crea tu cuenta o accede como invitado, elije tus gustos</h2>
+            <section id="functionality" class="section-padding">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="pill">Cómo funciona</p>
+                        <h2>Genera planes guiado por IA en 3 pasos</h2>
+                        <p class="section-lead">Interactúa con las tarjetas para ver la app en acción.</p>
                     </div>
-                    <div class="card card2" onclick="cambiarImagen(2)">
-                        <svg class="icon-fuctionality" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" zoomAndPan="magnify" viewBox="0 0 810 1012.49997" height="1350" preserveAspectRatio="xMidYMid meet" version="1.0"><path d="M 641.609375 477.894531 L 641.609375 649.691406 C 641.609375 709.152344 593.027344 757.738281 533.566406 757.738281 L 214.890625 757.738281 C 155.429688 757.738281 106.84375 709.152344 106.84375 649.691406 L 106.84375 331.015625 C 106.84375 271.554688 155.429688 222.972656 214.890625 222.972656 L 386.6875 222.972656 L 386.6875 262.015625 L 214.890625 262.015625 C 176.972656 262.015625 145.886719 293.101562 145.886719 331.015625 L 145.886719 649.691406 C 145.886719 687.609375 176.972656 718.695312 214.890625 718.695312 L 533.566406 718.695312 C 571.460938 718.695312 602.546875 687.609375 602.546875 649.691406 L 602.546875 477.894531 Z M 593.214844 351.742188 L 512.84375 271.367188 L 323.660156 460.546875 L 404.035156 540.921875 Z M 540.453125 243.753906 L 620.828125 324.128906 L 648.328125 296.648438 L 567.933594 216.253906 Z M 363.007812 555.101562 L 309.480469 501.574219 L 299.710938 564.871094 Z M 407.011719 587.828125 L 252.976562 611.585938 L 277.710938 451.234375 C 374.4375 354.488281 471.164062 257.757812 567.914062 161.03125 L 703.511719 296.628906 C 606.785156 393.359375 510.035156 490.085938 413.308594 586.835938 L 406.992188 587.808594 Z M 407.011719 587.828125 " fill-opacity="1" fill-rule="nonzero"/></svg>
-                        <h2>Crea el plan seleccionando como lo deseas</h2>
-                    </div>
-                    <div class="card card3" onclick="cambiarImagen(3)">
-                        <svg class="icon-fuctionality" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" zoomAndPan="magnify" viewBox="0 0 810 1012.49997" height="1350" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><path d="M 95.558594 155.417969 L 743.238281 155.417969 L 743.238281 803.101562 L 95.558594 803.101562 Z M 95.558594 155.417969 " clip-rule="nonzero"/></defs><path  d="M 419.398438 803.101562 C 240.832031 803.101562 95.558594 657.828125 95.558594 479.261719 C 95.558594 300.691406 240.832031 155.417969 419.398438 155.417969 C 597.964844 155.417969 743.238281 300.691406 743.238281 479.261719 C 743.238281 657.828125 597.964844 803.101562 419.398438 803.101562 " fill-opacity="1" fill-rule="nonzero"/><path fill="#07182E" d="M 292.039062 621.925781 L 292.039062 336.59375 L 546.757812 336.59375 L 546.757812 621.925781 L 419.398438 523.882812 L 292.039062 621.925781 " fill-opacity="1" fill-rule="nonzero"/></svg>       
-                        <h2>Selecciona, Guarda  o sigue explorando nuevos plan</h2>
+                    <div class="steps">
+                        <div class="steps-visual">
+                            <div class="glow"></div>
+                            <img id="displayed-image" src="img/mockup-funtions.png" alt="Flujo TooPlan" class="mockup shadow">
+                            <p class="caption">No pierdas tiempo planeando. Empieza a vivir.</p>
+                        </div>
+                        <div class="steps-cards" id="cards-container">
+                            <button class="step-card active" data-step="1">
+                                <span class="step-number">01</span>
+                                <div>
+                                    <h3>Configura tu mood</h3>
+                                    <p>Elige energía, presupuesto y tiempo disponible. TooPlan aprende de tus swipes.</p>
+                                </div>
+                            </button>
+                            <button class="step-card" data-step="2">
+                                <span class="step-number">02</span>
+                                <div>
+                                    <h3>Genera el plan</h3>
+                                    <p>La IA cruza datos y clima para crear experiencias dinámicas y realistas.</p>
+                                </div>
+                            </button>
+                            <button class="step-card" data-step="3">
+                                <span class="step-number">03</span>
+                                <div>
+                                    <h3>Guarda o explora</h3>
+                                    <p>Confirma tu favorito, guarda para después o deja que TooPlan siga proponiendo.</p>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="profits" class="section-padding">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="pill">Beneficios</p>
+                        <h2>Un día cualquiera o un día épico. Tú eliges.</h2>
+                        <p class="section-lead">TooPlan trabaja en segundo plano para darte planes memorables sin esfuerzo.</p>
+                    </div>
+                    <div class="benefits-grid">
+                        <div class="benefit-card reveal">
+                            <h3>Planes en segundos</h3>
+                            <p>Itinerarios listos para salir, adaptados a tu situación exacta.</p>
+                        </div>
+                        <div class="benefit-card reveal">
+                            <h3>Experiencias diferentes</h3>
+                            <p>Actividades curadas, pensadas solo para ti y alejadas de lo típico.</p>
+                        </div>
+                        <div class="benefit-card reveal">
+                            <h3>Optimizado a tu bolsillo</h3>
+                            <p>Control total de presupuesto, tiempo y ubicación sin sacrificar diversión.</p>
+                        </div>
+                        <div class="benefit-card reveal">
+                            <h3>Siempre conectado</h3>
+                            <p>Actualizaciones en tiempo real para planes indoor, outdoor o híbridos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding alt" aria-label="Prueba social TooPlan">
+                <div class="container social-proof">
+                    <div>
+                        <p class="pill">Confianza</p>
+                        <h2>La comunidad TooPlan no pierde tiempo</h2>
+                        <p class="section-lead">Usuarios se inspiran, comparten y viven más. Únete y descubre por qué TooPlan supera a las lanzaderas de ocio que ya conoces.</p>
+                        <div class="quotes">
+                            <div class="quote-card glass reveal">
+                                <p>“Dejamos de discutir dónde ir. TooPlan nos manda la ruta y solo salimos.”</p>
+                                <span>Camila · Plan en pareja</span>
+                            </div>
+                            <div class="quote-card glass reveal">
+                                <p>“Funciona mejor que cualquier recomendador que probé. Sabe cuándo quiero chillear o salir de aventura.”</p>
+                                <span>Marco · Domingo con amigos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proof-card glass reveal">
+                        <h3>Te acompaña en cualquier mood</h3>
+                        <ul>
+                            <li>Ideas relámpago para huecos de 30 minutos</li>
+                            <li>Planes extendidos con rutas completas</li>
+                            <li>Reservas sugeridas y lugares escondidos</li>
+                            <li>Recordatorios y seguimiento en vivo</li>
+                        </ul>
+                        <div class="cta-inline">
+                            <a class="btn primary" href="#download">Quiero TooPlan</a>
+                            <span class="tiny">Gratis mientras lanzamos</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="download" class="section-padding download-block">
+                <div class="container">
+                    <div class="download-card">
+                        <div>
+                            <p class="pill">Lanzamiento en camino</p>
+                            <h2>Descarga TooPlan y transforma tu tiempo libre</h2>
+                            <p class="section-lead">Suscríbete para recibir acceso anticipado, recompensas por early adopters y las mejores misiones en tu ciudad.</p>
+                            <div class="hero-actions">
+                                <a class="btn primary" href="#">Notificarme</a>
+                                <a class="btn ghost" href="#hero">Volver arriba</a>
+                            </div>
+                            <div class="badges">
+                                <a href="#"><img src="img/badge-googleplay-es.png" alt="Disponible en Google Play"></a>
+                                <a href="#"><img src="img/badge-appstore-es.png" alt="Disponible en App Store"></a>
+                            </div>
+                        </div>
+                        <img src="img/mockup-crearplan-portrait.png" alt="Generador de planes TooPlan" class="mockup shadow">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container footer-content">
+                <div class="brand">
+                    <img src="img/LogoFinal-PNG-BLANCO.png" alt="Logo TooPlan" class="logo-footer">
+                    <p>TooPlan, planes de ocio personalizados con IA.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">Sobre la app</a>
+                    <a href="#functionality">Cómo funciona</a>
+                    <a href="#download">Descargar</a>
+                </div>
+                <p class="copyright">&copy; 2025 TooPlan. Todos los derechos reservados.</p>
             </div>
-        </section>
-        <section id="profits">
-            <h2 class="tittle-sections">Un día cualquiera o un día único. Tú eliges</h2>
-            <div id="mosaico-profits">
-                <div class="box-profit item1">
-                    <img src="img/ejemplo.jpg" alt="imagen" class="img-box-profit">
-                </div>
-                <div class="box-profit item2">
-                    <svg class="icon-box-profit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" zoomAndPan="magnify" viewBox="0 0 810 1012.49997" height="1350" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="e2c731e15d"><path d="M 163 321 L 680.863281 321 L 680.863281 818.113281 L 163 818.113281 Z M 163 321 " clip-rule="nonzero"/></clipPath><clipPath id="3bb39427c7"><path d="M 81.160156 548 L 173 548 L 173 574 L 81.160156 574 Z M 81.160156 548 " clip-rule="nonzero"/></clipPath><clipPath id="8dd00a2d70"><path d="M 352 193.671875 L 531 193.671875 L 531 349 L 352 349 Z M 352 193.671875 " clip-rule="nonzero"/></clipPath></defs><path d="M 432.421875 363.796875 C 489.5 363.796875 540.726562 386.839844 578.046875 424.148438 C 615.367188 461.453125 638.417969 513.023438 638.417969 569.714844 C 638.417969 626.773438 615.367188 677.976562 578.046875 715.285156 C 540.726562 752.589844 489.5 775.632812 432.421875 775.632812 C 375.707031 775.632812 324.113281 752.589844 286.792969 715.285156 C 249.472656 677.976562 226.421875 626.773438 226.421875 569.714844 C 226.421875 513.023438 249.472656 461.453125 286.792969 424.148438 C 324.113281 386.839844 375.707031 363.796875 432.421875 363.796875 Z M 560.851562 441.335938 C 527.917969 408.785156 482.546875 388.304688 432.421875 388.304688 C 382.292969 388.304688 336.921875 408.785156 303.992188 441.335938 C 271.425781 474.253906 250.9375 519.609375 250.9375 569.714844 C 250.9375 619.824219 271.425781 665.175781 303.992188 698.09375 C 336.921875 731.011719 382.292969 751.128906 432.421875 751.128906 C 482.546875 751.128906 527.917969 731.011719 560.851562 698.09375 C 593.78125 665.175781 614.269531 619.824219 614.269531 569.714844 C 614.269531 519.609375 593.78125 474.253906 560.851562 441.335938 Z M 560.851562 441.335938 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#e2c731e15d)"><path d="M 175.195312 418.296875 C 168.609375 418.296875 163.121094 423.78125 163.121094 430.730469 C 163.121094 437.3125 168.609375 442.800781 175.195312 442.800781 L 241.789062 442.800781 C 246.179688 442.800781 249.839844 440.605469 252.035156 437.3125 C 272.890625 409.152344 299.964844 386.109375 331.066406 370.015625 C 361.4375 354.652344 396.195312 345.875 432.421875 345.875 C 494.257812 345.875 550.238281 371.113281 590.851562 411.34375 C 631.46875 451.945312 656.347656 507.902344 656.347656 569.714844 C 656.347656 631.527344 631.46875 687.488281 590.851562 728.085938 C 550.238281 768.683594 494.257812 793.554688 432.421875 793.554688 C 396.195312 793.554688 361.4375 785.144531 331.066406 769.417969 C 299.601562 753.6875 272.523438 730.28125 251.667969 701.753906 C 249.105469 698.460938 245.449219 696.996094 241.789062 696.996094 L 175.195312 696.996094 C 168.609375 696.996094 163.121094 702.117188 163.121094 709.066406 C 163.121094 715.652344 168.609375 721.136719 175.195312 721.136719 L 235.566406 721.136719 C 258.253906 750.398438 287.160156 774.535156 320.089844 791.359375 C 354.117188 808.550781 392.171875 818.0625 432.421875 818.0625 C 501.207031 818.0625 563.046875 790.265625 608.050781 745.277344 C 653.054688 700.289062 680.863281 638.476562 680.863281 569.714844 C 680.863281 501.320312 653.054688 439.144531 608.050781 394.15625 C 563.046875 349.535156 501.207031 321.738281 432.421875 321.738281 C 392.171875 321.738281 354.117188 331.246094 320.089844 348.4375 C 287.160156 365.261719 258.253906 389.402344 235.933594 418.296875 Z M 175.195312 418.296875 " fill-opacity="1" fill-rule="nonzero"/></g><path d="M 444.859375 376.234375 C 444.859375 369.285156 439.371094 363.796875 432.421875 363.796875 C 425.835938 363.796875 420.34375 369.285156 420.34375 376.234375 L 420.34375 409.515625 C 420.34375 416.101562 425.835938 421.585938 432.421875 421.585938 C 439.371094 421.585938 444.859375 416.101562 444.859375 409.515625 Z M 444.859375 376.234375 " fill-opacity="1" fill-rule="nonzero"/><path d="M 539.992188 408.054688 C 543.285156 402.203125 541.457031 394.886719 535.601562 391.59375 C 529.75 388.304688 522.066406 390.132812 518.773438 395.984375 L 502.304688 424.878906 C 499.011719 430.730469 500.84375 438.046875 506.695312 441.335938 C 512.550781 444.628906 519.871094 442.800781 523.164062 436.949219 Z M 539.992188 408.054688 " fill-opacity="1" fill-rule="nonzero"/><path d="M 606.222656 483.398438 C 612.074219 480.105469 614.269531 472.792969 610.976562 466.941406 C 607.683594 461.085938 600 459.257812 594.144531 462.550781 L 565.605469 479.007812 C 559.753906 482.300781 557.558594 489.980469 560.851562 495.835938 C 564.144531 501.320312 571.828125 503.515625 577.679688 500.222656 Z M 606.222656 483.398438 " fill-opacity="1" fill-rule="nonzero"/><path d="M 626.34375 582.152344 C 632.929688 582.152344 638.417969 576.664062 638.417969 569.714844 C 638.417969 563.132812 632.929688 557.644531 626.34375 557.644531 L 593.046875 557.644531 C 586.097656 557.644531 580.972656 563.132812 580.972656 569.714844 C 580.972656 576.664062 586.097656 582.152344 593.046875 582.152344 Z M 626.34375 582.152344 " fill-opacity="1" fill-rule="nonzero"/><path d="M 594.144531 677.246094 C 600 680.539062 607.683594 678.34375 610.976562 672.859375 C 614.269531 667.003906 612.074219 659.324219 606.222656 656.035156 L 577.679688 639.574219 C 571.828125 636.28125 564.144531 638.113281 560.851562 643.964844 C 557.558594 649.816406 559.753906 657.128906 565.605469 660.421875 Z M 594.144531 677.246094 " fill-opacity="1" fill-rule="nonzero"/><path d="M 518.773438 743.449219 C 522.066406 749.300781 529.75 751.496094 535.601562 748.203125 C 541.457031 744.910156 543.285156 737.230469 539.992188 731.378906 L 523.164062 702.847656 C 519.871094 696.996094 512.550781 694.804688 506.695312 698.09375 C 500.84375 701.386719 499.011719 709.066406 502.304688 714.917969 Z M 518.773438 743.449219 " fill-opacity="1" fill-rule="nonzero"/><path d="M 420.34375 763.5625 C 420.34375 770.148438 425.835938 775.632812 432.421875 775.632812 C 439.371094 775.632812 444.859375 770.148438 444.859375 763.5625 L 444.859375 730.28125 C 444.859375 723.332031 439.371094 717.84375 432.421875 717.84375 C 425.835938 717.84375 420.34375 723.332031 420.34375 730.28125 Z M 420.34375 763.5625 " fill-opacity="1" fill-rule="nonzero"/><path d="M 325.210938 731.378906 C 321.917969 737.230469 323.75 744.910156 329.601562 748.203125 C 335.457031 751.496094 342.777344 749.300781 346.070312 743.449219 L 362.898438 714.917969 C 366.191406 709.066406 363.996094 701.386719 358.507812 698.09375 C 352.65625 694.804688 344.972656 696.996094 341.679688 702.847656 Z M 325.210938 731.378906 " fill-opacity="1" fill-rule="nonzero"/><path d="M 258.621094 656.035156 C 252.765625 659.324219 250.9375 667.003906 254.230469 672.859375 C 257.523438 678.34375 264.839844 680.539062 270.695312 677.246094 L 299.601562 660.421875 C 305.453125 657.128906 307.285156 649.816406 303.992188 643.964844 C 300.699219 638.113281 293.378906 636.28125 287.523438 639.574219 Z M 258.621094 656.035156 " fill-opacity="1" fill-rule="nonzero"/><path d="M 238.859375 557.644531 C 231.910156 557.644531 226.421875 563.132812 226.421875 569.714844 C 226.421875 576.664062 231.910156 582.152344 238.859375 582.152344 L 272.15625 582.152344 C 278.742188 582.152344 284.230469 576.664062 284.230469 569.714844 C 284.230469 563.132812 278.742188 557.644531 272.15625 557.644531 Z M 238.859375 557.644531 " fill-opacity="1" fill-rule="nonzero"/><path d="M 270.695312 462.550781 C 264.839844 459.257812 257.523438 461.085938 254.230469 466.941406 C 250.9375 472.792969 252.765625 480.105469 258.621094 483.398438 L 287.523438 500.222656 C 293.378906 503.515625 300.699219 501.320312 303.992188 495.835938 C 307.285156 489.980469 305.453125 482.300781 299.601562 479.007812 Z M 270.695312 462.550781 " fill-opacity="1" fill-rule="nonzero"/><path d="M 346.070312 395.984375 C 342.777344 390.132812 335.457031 388.304688 329.601562 391.59375 C 323.75 394.886719 321.917969 402.203125 325.210938 408.054688 L 341.679688 436.949219 C 344.972656 442.800781 352.65625 444.628906 358.507812 441.335938 C 363.996094 438.046875 366.191406 430.730469 362.898438 424.878906 Z M 346.070312 395.984375 " fill-opacity="1" fill-rule="nonzero"/><path d="M 432.421875 540.089844 C 440.835938 540.089844 448.152344 543.382812 453.640625 548.867188 C 453.640625 549.234375 454.007812 549.601562 454.375 549.964844 C 459.128906 555.085938 462.058594 562.035156 462.058594 569.714844 C 462.058594 578.128906 458.765625 585.441406 453.640625 590.5625 L 444.859375 582.152344 L 453.640625 590.5625 L 453.277344 590.929688 C 447.789062 596.050781 440.46875 599.339844 432.421875 599.339844 C 424.371094 599.339844 417.050781 596.050781 411.5625 590.5625 C 411.199219 590.5625 411.199219 590.199219 410.832031 589.832031 C 406.074219 584.710938 402.78125 577.398438 402.78125 569.714844 C 402.78125 561.667969 406.074219 554.355469 411.5625 548.867188 L 420.34375 557.644531 L 411.5625 548.867188 C 411.929688 548.503906 412.296875 548.503906 412.660156 548.136719 C 417.785156 543.382812 424.738281 540.089844 432.421875 540.089844 Z M 436.078125 566.058594 C 435.347656 565.328125 433.882812 564.59375 432.421875 564.59375 C 431.324219 564.59375 430.226562 564.960938 429.128906 565.691406 L 428.761719 566.058594 C 428.03125 567.15625 427.296875 568.253906 427.296875 569.714844 C 427.296875 571.179688 427.664062 572.277344 428.394531 573.007812 L 428.761719 573.375 C 429.859375 574.472656 430.957031 575.203125 432.421875 575.203125 C 433.882812 575.203125 435.347656 574.472656 436.078125 573.375 C 437.175781 572.640625 437.910156 571.179688 437.910156 569.714844 C 437.910156 568.617188 437.175781 567.519531 436.445312 566.425781 Z M 436.078125 566.058594 " fill-opacity="1" fill-rule="nonzero"/><path d="M 420.34375 552.527344 C 420.34375 559.109375 425.835938 564.59375 432.421875 564.59375 C 439.371094 564.59375 444.859375 559.109375 444.859375 552.527344 L 444.859375 474.621094 C 444.859375 467.671875 439.371094 462.183594 432.421875 462.183594 C 425.835938 462.183594 420.34375 467.671875 420.34375 474.621094 Z M 420.34375 552.527344 " fill-opacity="1" fill-rule="nonzero"/><path d="M 451.8125 578.859375 C 448.519531 573.007812 440.835938 570.8125 434.980469 574.472656 C 429.492188 577.761719 427.296875 585.078125 430.589844 590.929688 L 469.742188 658.59375 C 473.035156 664.445312 480.351562 666.273438 486.207031 662.984375 C 492.0625 659.691406 494.257812 652.011719 490.597656 646.15625 Z M 451.8125 578.859375 " fill-opacity="1" fill-rule="nonzero"/><path d="M 126.898438 622.75 C 119.945312 622.75 114.457031 628.234375 114.457031 634.820312 C 114.457031 641.769531 119.945312 647.253906 126.898438 647.253906 L 193.488281 647.253906 C 200.078125 647.253906 205.566406 641.769531 205.566406 634.820312 C 205.566406 628.234375 200.078125 622.75 193.488281 622.75 Z M 126.898438 622.75 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#3bb39427c7)"><path d="M 93.601562 548.503906 C 86.648438 548.503906 81.160156 553.988281 81.160156 560.570312 C 81.160156 567.519531 86.648438 573.007812 93.601562 573.007812 L 160.195312 573.007812 C 166.78125 573.007812 172.269531 567.519531 172.269531 560.570312 C 172.269531 553.988281 166.78125 548.503906 160.195312 548.503906 Z M 93.601562 548.503906 " fill-opacity="1" fill-rule="nonzero"/></g><path d="M 126.898438 474.253906 C 119.945312 474.253906 114.457031 479.742188 114.457031 486.691406 C 114.457031 493.273438 119.945312 498.761719 126.898438 498.761719 L 193.488281 498.761719 C 200.078125 498.761719 205.566406 493.273438 205.566406 486.691406 C 205.566406 479.742188 200.078125 474.253906 193.488281 474.253906 Z M 126.898438 474.253906 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#8dd00a2d70)"><path d="M 404.613281 334.171875 C 404.613281 341.121094 410.101562 346.609375 416.6875 346.609375 C 423.640625 346.609375 429.128906 341.121094 429.128906 334.171875 L 429.128906 255.167969 C 429.128906 248.585938 423.640625 243.101562 416.6875 243.101562 L 376.804688 243.101562 L 376.804688 218.230469 L 505.964844 218.230469 L 505.964844 243.101562 L 466.082031 243.101562 C 459.496094 243.101562 454.007812 248.585938 454.007812 255.167969 L 454.007812 336.730469 C 454.007812 343.316406 459.496094 348.800781 466.082031 348.800781 C 473.035156 348.800781 478.523438 343.316406 478.523438 336.730469 L 478.523438 267.605469 L 518.40625 267.605469 C 524.992188 267.605469 530.480469 262.121094 530.480469 255.167969 L 530.480469 206.160156 C 530.480469 199.210938 524.992188 193.722656 518.40625 193.722656 L 364.730469 193.722656 C 358.144531 193.722656 352.65625 199.210938 352.65625 206.160156 L 352.65625 255.167969 C 352.65625 262.121094 358.144531 267.605469 364.730469 267.605469 L 404.613281 267.605469 Z M 404.613281 334.171875 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
-                    <p class="text-profit">Planes listos en segundos, sin perder tiempo.</p>
-                </div>
-                <div class="box-profit item3">
-                    <p>Actividades únicas y diferentes, pensadas solo para ti.</p>
-                </div>
-                <div class="box-profit item4">
-                </div>
-                <div class="box-profit item5">
-                    <p>Todo se adapta a tu presupuesto, tiempo y ubicación. </p>
-                </div>
-                <div class="box-profit item6">
-                </div>
-                <div class="box-profit item7">
-                    <p>¡Y lo mejor... totalmente GRATIS!</p>
-                </div>
-                <div class="box-profit item8"> 
-                    <p>Acceso exclusivo a propuestas antes que nadie..</p>
-                </div>
-            </div>
-        </section>
-       
-        <section id="download">
-            <h2>Descargar TooPlan</h2>
-            <p>Disponible en todas las plataformas. ¡Descárgala ahora!</p>
-        </section>
-    </main>
-    <footer>
-        <h2></h2>
-        <img src="img/LogoFinal-PNG-BLANCO.png" alt="logo" class="logo-footer">
-        <p>&copy; 2025 TooPlan. Todos los derechos reservados.</p>  
-        <p>Desarrollado por Juanp</p>
-    </footer>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
