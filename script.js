@@ -5,18 +5,13 @@ let wordIndex = 0;
 
 const stepImages = {
   1: 'img/mockup-funtions.png',
-  2: 'img/mockup-principal.png',
-  3: 'img/mockup-crearplan-portrait.png',
+  2: 'img/mockup-crearplan-portrait.png',
+  3: 'img/mockup-funtions.png',
 };
 
 function rotateWords() {
-  if (!dynamicWord) return;
-  dynamicWord.classList.add('fade');
-  setTimeout(() => {
-    wordIndex = (wordIndex + 1) % words.length;
-    dynamicWord.textContent = words[wordIndex];
-    dynamicWord.classList.remove('fade');
-  }, 240);
+  wordIndex = (wordIndex + 1) % words.length;
+  dynamicWord.textContent = words[wordIndex];
 }
 
 function handleScroll() {
@@ -57,9 +52,7 @@ function setupReveal() {
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 }
 
-if (dynamicWord) {
-  setInterval(rotateWords, 2200);
-}
+setInterval(rotateWords, 2200);
 window.addEventListener('scroll', handleScroll);
 
 document.addEventListener('DOMContentLoaded', () => {
