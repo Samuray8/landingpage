@@ -6,7 +6,10 @@ let wordIndex = 0;
 const slidesContainer = document.getElementById('slides');
 const slides = Array.from(document.querySelectorAll('.slide'));
 const stepCards = Array.from(document.querySelectorAll('.step-card'));
+const progressFill = document.getElementById('step-progress-fill');
+const restartDemoButton = document.getElementById('restart-demo');
 const parallaxState = { x: 0, y: 0, scroll: 0 };
+let autoStepTimer;
 
 function rotateWords() {
   if (!dynamicWord) return;
@@ -38,12 +41,40 @@ function showStep(step) {
   stepCards.forEach((card) => card.classList.toggle('active', card.dataset.step === step));
 }
 
+function cycleSteps() {
+  const currentIndex = stepCards.findIndex((card) => card.classList.contains('active'));
+  const nextIndex = (currentIndex + 1) % stepCards.length;
+  showStep(stepCards[nextIndex].dataset.step);
+  restartProgress();
+}
+
+function startAutoSteps() {
+  clearInterval(autoStepTimer);
+  autoStepTimer = setInterval(cycleSteps, 4600);
+  restartProgress();
+}
+
 function setupSteps() {
   stepCards.forEach((card) => {
     card.addEventListener('click', () => {
       showStep(card.dataset.step);
+      startAutoSteps();
     });
   });
+
+  const sliderZone = document.getElementById('steps-slider');
+  if (sliderZone) {
+    sliderZone.addEventListener('mouseenter', () => clearInterval(autoStepTimer));
+    sliderZone.addEventListener('mouseenter', () => progressFill?.classList.remove('run'));
+    sliderZone.addEventListener('mouseleave', startAutoSteps);
+  }
+
+  if (restartDemoButton) {
+    restartDemoButton.addEventListener('click', () => {
+      showStep('1');
+      startAutoSteps();
+    });
+  }
 }
 
 function setupReveal() {
@@ -82,6 +113,13 @@ function updateMockupTransform() {
   heroMockup.style.transform = `translate(${parallaxState.x}px, ${parallaxState.scroll + parallaxState.y}px)`;
 }
 
+function restartProgress() {
+  if (!progressFill) return;
+  progressFill.classList.remove('run');
+  void progressFill.offsetWidth;
+  progressFill.classList.add('run');
+}
+
 if (dynamicWord) {
   setInterval(rotateWords, 2200);
 }
@@ -94,4 +132,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupReveal();
   setupParallax();
   showStep('1');
+  startAutoSteps();
 });
