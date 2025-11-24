@@ -28,21 +28,26 @@
         <main>
             <section id="hero" class="section-padding full-height">
                 <div class="hero-bg" aria-hidden="true"></div>
-                <div class="hero-grid container">
+                <div class="container hero-grid">
                     <div class="hero-text">
-                        <p class="pill">App de ocio inteligente</p>
+                        <p class="pill">Plan perfecto en 10s</p>
                         <h1>El plan perfecto para ti. <span class="gradient-text">Sin buscar.</span></h1>
-                        <p class="lead">TooPlan crea planes de ocio ultra-personalizados según tu mood, intereses, ubicación y presupuesto. Tu tiempo libre se vuelve automático.</p>
+                        <p class="lead">TooPlan crea planes de ocio ultra-personalizados según tu mood, intereses, ubicación y presupuesto. Tu tiempo libre se vuelve automático y alineado a tu vibe.</p>
                         <div class="hero-badges">
                             <span class="badge">100% gratis – siempre tendrás un plan perfecto</span>
                             <div class="word-rotator" aria-live="polite">
                                 <span class="label">Diseñado para</span>
                                 <span id="dynamic-word" class="fade">tu vibe</span>
                             </div>
+                            <span class="pulse-pill" aria-hidden="true">Listo ahora</span>
                         </div>
                         <div class="hero-actions">
                             <a class="btn primary" href="#download">Descargar TooPlan</a>
                             <a class="btn ghost" href="#demo">Ver cómo funciona</a>
+                        </div>
+                        <div class="store-badges">
+                            <a href="#"><img src="img/badge-googleplay-es.png" alt="Disponible en Google Play"></a>
+                            <a href="#"><img src="img/badge-appstore-es.png" alt="Disponible en App Store"></a>
                         </div>
                         <div class="hero-points">
                             <span class="chip">Cero búsqueda</span>
@@ -62,6 +67,10 @@
                                 <p class="metric-value">30 seg</p>
                                 <p class="metric-label">para crear tu plan</p>
                             </div>
+                            <div class="metric inline-badge">
+                                <p class="metric-value">Dinámico</p>
+                                <p class="metric-label">Actualizamos según clima y tráfico</p>
+                            </div>
                         </div>
                     </div>
                     <div class="hero-visual">
@@ -70,14 +79,33 @@
                         <div class="parallax-layer blur-light"></div>
                         <div class="floating-card glass">“TooPlan ya tiene todo armado para esta noche.”</div>
                         <div class="hero-mockup" data-parallax>
-                            <img src="img/mockup-principal.png" alt="Vista previa de TooPlan" class="mockup shadow" id="mockup-main">
                             <div class="floating-badge glass">Listo cuando tú quieras</div>
+                            <img src="img/mockup-principal.png" alt="Vista previa de TooPlan" class="mockup shadow" id="mockup-main">
+                            <div class="context-card">
+                                <div class="context-header">
+                                    <span class="dot"></span>
+                                    <div>
+                                        <p class="label">Tu plan de hoy</p>
+                                        <p class="title">Visita nocturna a la Catedral</p>
+                                    </div>
+                                    <span class="badge-soft">Catedral</span>
+                                </div>
+                                <ul class="context-list">
+                                    <li>Salida a pie desde tu ubicación</li>
+                                    <li>Recorrido 45-60 mins</li>
+                                    <li>Parada en el café con mejor puntaje</li>
+                                </ul>
+                            </div>
+                            <div class="floating-status glass" aria-hidden="true">
+                                <p class="label">Interactividad</p>
+                                <p class="title">Parallax y demo auto-play afinados</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="about" class="section-padding">
+            <section id="about" class="section-padding alt">
                 <div class="container">
                     <div class="section-header">
                         <p class="pill">Planes hechos para ti</p>
@@ -110,7 +138,7 @@
                 </div>
             </section>
 
-            <section id="demo" class="section-padding alt">
+            <section id="demo" class="section-padding">
                 <div class="container">
                     <div class="section-header">
                         <p class="pill">Demo</p>
@@ -129,6 +157,9 @@
                                 <div class="slide" data-step="3">
                                     <img src="img/mockup-crearplan-portrait.png" alt="Recibe tu plan" class="mockup shadow">
                                 </div>
+                            </div>
+                            <div class="step-progress" aria-hidden="true">
+                                <div class="progress-fill" id="step-progress-fill"></div>
                             </div>
                         </div>
                         <div class="steps-list" id="steps-list">
@@ -153,6 +184,10 @@
                                     <p>Un plan listo para salir. ¿No te gusta? Obtén uno nuevo al instante.</p>
                                 </div>
                             </button>
+                            <div class="demo-actions">
+                                <p class="demo-hint">Auto-play reinicia al interactuar. Pausa al pasar el cursor.</p>
+                                <button class="btn ghost sm" id="restart-demo">Reiniciar demo</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,7 +217,7 @@
                 </div>
             </section>
 
-            <section id="tech" class="section-padding">
+            <section id="tech" class="section-padding alt">
                 <div class="container">
                     <div class="section-header">
                         <p class="pill">Innovación</p>
@@ -222,7 +257,7 @@
                 </div>
             </section>
 
-            <section id="brand" class="section-padding alt">
+            <section id="brand" class="section-padding">
                 <div class="container brand-grid">
                     <div>
                         <p class="pill">Conócenos</p>
@@ -252,7 +287,7 @@
                                 <a class="btn primary" href="#">Descargar TooPlan</a>
                                 <a class="btn ghost" href="#hero">Ver más opciones</a>
                             </div>
-                            <div class="badges">
+                            <div class="store-badges">
                                 <a href="#"><img src="img/badge-googleplay-es.png" alt="Disponible en Google Play"></a>
                                 <a href="#"><img src="img/badge-appstore-es.png" alt="Disponible en App Store"></a>
                             </div>
